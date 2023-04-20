@@ -1,4 +1,4 @@
-package ms.Escuela.entity;
+package main.java.ms.Escuela.entity;
 
 import javax.persistence.*;
 
@@ -16,8 +16,8 @@ public class Carreras {
     @Column(name = "duracion")
     private int duracion;
 
-    @Column(name = "id_campus")
-    private int id_campus;
+    /*@Column(name = "id_campus")
+    private int id_campus;*/
     /*@ManyToOne
     @JoinColumn(name = "id_campus")
     private Campus campus;*/
@@ -34,11 +34,11 @@ public class Carreras {
     public Carreras() {
     }
 
-    public Carreras(Integer id_carrera, String nombre, int duracion, int id_campus) {
+    public Carreras(Integer id_carrera, String nombre, int duracion) {
         this.id_carrera = id_carrera;
         this.nombre = nombre;
         this.duracion = duracion;
-        this.id_campus = id_campus;
+
     }
 
     public Integer getId_carrera() {
@@ -65,13 +65,8 @@ public class Carreras {
         this.duracion = duracion;
     }
 
-    public int getId_campus() {
-        return id_campus;
-    }
 
-    public void setId_campus(int id_campus) {
-        this.id_campus = id_campus;
-    }
+
 
     @Override
     public String toString() {
@@ -79,7 +74,6 @@ public class Carreras {
                 "id_carrera=" + id_carrera +
                 ", nombre='" + nombre + '\'' +
                 ", duracion=" + duracion +
-                ", id_campus=" + id_campus +
                 '}';
     }
 }

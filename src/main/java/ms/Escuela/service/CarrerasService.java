@@ -1,7 +1,7 @@
-package ms.Escuela.service;
+package main.java.ms.Escuela.service;
 
-import ms.Escuela.entity.Carreras;
-import ms.Escuela.repository.CarrerasRepository;
+import main.java.ms.Escuela.entity.Carreras;
+import main.java.ms.Escuela.repository.CarrerasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

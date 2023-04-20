@@ -1,4 +1,4 @@
-package ms.Escuela.entity;
+package main.java.ms.Escuela.entity;
 
 import javax.persistence.*;
 
@@ -13,8 +13,8 @@ public class Profesor {
     @Column(name = "nombre")
     private String nombre;
 
-    @Column(name = "id_materia")
-    private int id_materia;
+    /*@Column(name = "id_materia")
+    private int id_materia;*/
     /*@ManyToOne
     @JoinColumn(name = "id_materia")
     private Materia materia;*/
@@ -36,14 +36,14 @@ public class Profesor {
     @Column(name = "antiguedad")
     private int antiguedad;
 
-    @Column(name = "id_escuela")
-    private int id_escuela;
+    /*@Column(name = "id_escuela")
+    private int id_escuela;*/
     /*@ManyToOne
     @JoinColumn(name = "id_escuela")
     private Escuela escuela;*/
 
-    @Column(name = "id_administracion")
-    private int id_administracion;
+    /*@Column(name = "id_administracion")
+    private int id_administracion;*/
     /*@ManyToOne
     @JoinColumn(name = "id_administracion")
     private Administracion administracion;*/
@@ -52,18 +52,15 @@ public class Profesor {
     public Profesor() {
     }
 
-    public Profesor(Integer id_profesor, String nombre, int id_materia, int horas_totales, int horas_laboradas, int horas_nolaboradas, Double precio_horas, Double descuentos, int antiguedad, int id_escuela, int id_administracion) {
+    public Profesor(Integer id_profesor, String nombre, int horas_totales, int horas_laboradas, int horas_nolaboradas, Double precio_horas, Double descuentos, int antiguedad) {
         this.id_profesor = id_profesor;
         this.nombre = nombre;
-        this.id_materia = id_materia;
         this.horas_totales = horas_totales;
         this.horas_laboradas = horas_laboradas;
         this.horas_nolaboradas = horas_nolaboradas;
         this.precio_horas = precio_horas;
         this.descuentos = descuentos;
         this.antiguedad = antiguedad;
-        this.id_escuela = id_escuela;
-        this.id_administracion = id_administracion;
     }
 
     public Integer getId_profesor() {
@@ -80,14 +77,6 @@ public class Profesor {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public int getId_materia() {
-        return id_materia;
-    }
-
-    public void setId_materia(int id_materia) {
-        this.id_materia = id_materia;
     }
 
     public int getHoras_totales() {
@@ -138,36 +127,17 @@ public class Profesor {
         this.antiguedad = antiguedad;
     }
 
-    public int getId_escuela() {
-        return id_escuela;
-    }
-
-    public void setId_escuela(int id_escuela) {
-        this.id_escuela = id_escuela;
-    }
-
-    public int getId_administracion() {
-        return id_administracion;
-    }
-
-    public void setId_administracion(int id_administracion) {
-        this.id_administracion = id_administracion;
-    }
-
     @Override
     public String toString() {
         return "Profesor{" +
                 "id_profesor=" + id_profesor +
                 ", nombre='" + nombre + '\'' +
-                ", id_materia=" + id_materia +
                 ", horas_totales=" + horas_totales +
                 ", horas_laboradas=" + horas_laboradas +
                 ", horas_nolaboradas=" + horas_nolaboradas +
                 ", precio_horas=" + precio_horas +
                 ", descuentos=" + descuentos +
                 ", antiguedad=" + antiguedad +
-                ", id_escuela=" + id_escuela +
-                ", id_administracion=" + id_administracion +
                 '}';
     }
 }

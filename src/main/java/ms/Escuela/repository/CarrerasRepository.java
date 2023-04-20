@@ -1,6 +1,6 @@
-package ms.Escuela.repository;
+package main.java.ms.Escuela.repository;
 
-import ms.Escuela.entity.Carreras;
+import main.java.ms.Escuela.entity.Carreras;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

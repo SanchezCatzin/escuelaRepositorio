@@ -1,8 +1,8 @@
-package ms.Escuela.controller;
+package main.java.ms.Escuela.controller;
 
 
-import ms.Escuela.entity.Profesor;
-import ms.Escuela.service.ProfesorService;
+import main.java.ms.Escuela.entity.Profesor;
+import main.java.ms.Escuela.service.ProfesorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("devProfesor")
+@RequestMapping("devprofesor")
 public class ProfesorController {
     @Autowired
     ProfesorService profesorService;
