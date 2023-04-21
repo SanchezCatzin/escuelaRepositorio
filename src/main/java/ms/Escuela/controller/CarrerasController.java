@@ -1,7 +1,7 @@
-package main.java.ms.Escuela.controller;
+package ms.Escuela.controller;
 
-import main.java.ms.Escuela.entity.Carreras;
-import main.java.ms.Escuela.service.CarrerasService;
+import ms.Escuela.entity.Carreras;
+import ms.Escuela.service.CarrerasService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

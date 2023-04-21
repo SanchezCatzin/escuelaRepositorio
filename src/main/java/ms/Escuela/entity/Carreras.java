@@ -1,4 +1,4 @@
-package main.java.ms.Escuela.entity;
+package ms.Escuela.entity;
 
 import javax.persistence.*;
 

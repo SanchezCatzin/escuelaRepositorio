@@ -1,9 +1,9 @@
-package main.java.ms.Escuela.entity;
+package ms.Escuela.entity;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "profesor")
+@Table(name = "profesores")
 public class Profesor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,11 +13,7 @@ public class Profesor {
     @Column(name = "nombre")
     private String nombre;
 
-    /*@Column(name = "id_materia")
-    private int id_materia;*/
-    /*@ManyToOne
-    @JoinColumn(name = "id_materia")
-    private Materia materia;*/
+
     @Column(name = "horas_totales")
     private int horas_totales;
 
@@ -36,17 +32,7 @@ public class Profesor {
     @Column(name = "antiguedad")
     private int antiguedad;
 
-    /*@Column(name = "id_escuela")
-    private int id_escuela;*/
-    /*@ManyToOne
-    @JoinColumn(name = "id_escuela")
-    private Escuela escuela;*/
 
-    /*@Column(name = "id_administracion")
-    private int id_administracion;*/
-    /*@ManyToOne
-    @JoinColumn(name = "id_administracion")
-    private Administracion administracion;*/
 
 
     public Profesor() {

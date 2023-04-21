@@ -1,8 +1,8 @@
-package main.java.ms.Escuela.controller;
+package ms.Escuela.controller;
 
 
-import main.java.ms.Escuela.entity.Profesor;
-import main.java.ms.Escuela.service.ProfesorService;
+import ms.Escuela.entity.Profesor;
+import ms.Escuela.service.ProfesorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

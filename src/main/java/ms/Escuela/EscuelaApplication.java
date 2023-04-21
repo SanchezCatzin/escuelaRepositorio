@@ -1,4 +1,4 @@
-package main.java.ms.Escuela;
+package ms.Escuela;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
