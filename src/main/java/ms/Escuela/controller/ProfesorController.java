@@ -39,4 +39,10 @@ public class ProfesorController {
     public Profesor modificar(@RequestBody Profesor profesor){
         return profesorService.actualizar(profesor);
     }
+
+
+    @GetMapping("/calcular")
+    public String calcular(@RequestBody Profesor profesor){
+        return profesorService.calcularSalario(profesor);
+    }
 }
