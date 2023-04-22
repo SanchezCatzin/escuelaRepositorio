@@ -46,4 +46,10 @@ public class ProfesorController {
         return profesorService.calcularSalario(profesor);
     }
 
+
+    @PostMapping("/insertarProf")
+    public Profesor insertarProfesor(){
+        return profesorService.insertarProfe();
+    }
+
 }
