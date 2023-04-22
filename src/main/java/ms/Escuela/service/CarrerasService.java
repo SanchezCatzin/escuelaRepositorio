@@ -1,6 +1,7 @@
 package ms.Escuela.service;
 
 import ms.Escuela.entity.Carreras;
+import ms.Escuela.entity.Profesor;
 import ms.Escuela.repository.CarrerasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,4 +34,25 @@ public class CarrerasService {
     public Carreras actualizar(Carreras carreras){
         return carrerasRepository.save(carreras);
     }
+
+
+    //Carrera
+    public String calcularCarrera(Carreras carreras){
+        String mensaje="";
+        String nombre=carreras.getNombre();
+        Integer duracion =carreras.getDuracion();
+        String area=carreras.getArea();
+
+        if(duracion == 5){
+            mensaje="Tu carrera es del area de" + area;
+        } else if(duracion == 4){
+            mensaje="Tu carrera es del area de" + area;
+        }else{
+
+            mensaje="Tu carrera no pertenece a este campus ";
+        }
+        return mensaje;
+    }
+
+
 }

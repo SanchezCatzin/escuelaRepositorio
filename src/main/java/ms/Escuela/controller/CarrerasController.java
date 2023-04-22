@@ -1,6 +1,7 @@
 package ms.Escuela.controller;
 
 import ms.Escuela.entity.Carreras;
+import ms.Escuela.entity.Profesor;
 import ms.Escuela.service.CarrerasService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("devCarreras")
+@RequestMapping("devcarreras")
 public class CarrerasController {
     @Autowired
     CarrerasService carrerasService;
@@ -37,5 +38,11 @@ public class CarrerasController {
     @PutMapping("/modificar")
     public Carreras modificar(@RequestBody Carreras carreras){
         return carrerasService.actualizar(carreras);
+    }
+
+    //Carrera
+    @GetMapping("/calcularCarrera")
+    public String calcularCarrera(@RequestBody Carreras carreras){
+        return carrerasService.calcularCarrera(carreras);
     }
 }

@@ -16,6 +16,9 @@ public class Carreras {
     @Column(name = "duracion")
     private int duracion;
 
+    @Column(name = "area")
+    private String area;
+
     /*@Column(name = "id_campus")
     private int id_campus;*/
     /*@ManyToOne
@@ -34,11 +37,11 @@ public class Carreras {
     public Carreras() {
     }
 
-    public Carreras(Integer id_carrera, String nombre, int duracion) {
+    public Carreras(Integer id_carrera, String nombre, int duracion, String area) {
         this.id_carrera = id_carrera;
         this.nombre = nombre;
         this.duracion = duracion;
-
+        this.area = area;
     }
 
     public Integer getId_carrera() {
@@ -65,8 +68,13 @@ public class Carreras {
         this.duracion = duracion;
     }
 
+    public String getArea() {
+        return area;
+    }
 
-
+    public void setArea(String area) {
+        this.area = area;
+    }
 
     @Override
     public String toString() {
@@ -74,6 +82,7 @@ public class Carreras {
                 "id_carrera=" + id_carrera +
                 ", nombre='" + nombre + '\'' +
                 ", duracion=" + duracion +
+                ", area='" + area + '\'' +
                 '}';
     }
 }

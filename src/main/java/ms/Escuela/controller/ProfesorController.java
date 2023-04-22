@@ -45,4 +45,5 @@ public class ProfesorController {
     public String calcular(@RequestBody Profesor profesor){
         return profesorService.calcularSalario(profesor);
     }
+
 }
