@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @Service
 public class ProfesorService {
+    private Integer cont=0;
     @Autowired
     ProfesorRepository profesorRepository;
 
@@ -51,5 +52,10 @@ public class ProfesorService {
              mensaje="Este es tu pago de este mes: "+ salario;
         }
         return mensaje;
+    }
+
+    public Profesor insertarProfe(){
+        Profesor profesor=new Profesor(++cont, "Andres",50,20,30,250.00,3000.00,15);
+        return profesorRepository.save(profesor);
     }
 }

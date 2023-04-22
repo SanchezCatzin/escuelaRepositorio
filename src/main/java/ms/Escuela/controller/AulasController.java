@@ -36,7 +36,7 @@ public class AulasController {
     }
 
     @PutMapping("/modificar")
-    public Aulas modificar(@RequestBody Aulas aula){
-        return aulasService.actualizar(aula);
+    public Aulas modificar(){
+        return aulasService.actualizar();
     }
 }
