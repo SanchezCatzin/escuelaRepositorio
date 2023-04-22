@@ -45,5 +45,10 @@ public class EmpleadoController {
         return empleadoService.calcularSalario(pagoHora,horas,id);
     }
 
+    @GetMapping("/empleado/toString/{id}")
+    public String empleadoToString(@PathVariable Integer id){
+        return empleadoService.toStringEmpleado(id);
+    }
+
 
 }
