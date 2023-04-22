@@ -34,4 +34,10 @@ public class EmpleadoService {
         empleadoRepository.deleteById(id);
     }
 
+    public Empleado calcularSalario(double phora,int horas,int id){
+        Empleado empleado=empleadoRepository.findById(id).get();
+        empleado.setSueldo(phora*horas);
+        return empleadoRepository.save(empleado);
+    }
+
 }

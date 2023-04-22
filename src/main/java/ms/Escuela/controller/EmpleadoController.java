@@ -40,4 +40,10 @@ public class EmpleadoController {
         empleadoService.borrarEmpleado(id);
     }
 
+    @GetMapping("/horas/{pagoHora}/{horas}/{id}")
+    public Empleado calcularSalario(@PathVariable double pagoHora, @PathVariable int horas, @PathVariable int id){
+        return empleadoService.calcularSalario(pagoHora,horas,id);
+    }
+
+
 }

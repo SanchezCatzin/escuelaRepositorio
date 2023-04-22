@@ -33,4 +33,23 @@ public class ProfesorService {
     public Profesor actualizar(Profesor profesor){
         return profesorRepository.save(profesor);
     }
+
+    public String calcularSalario(Profesor prof){
+        String mensaje="";
+        Double salario=0.0;
+        Double descuentos=prof.getDescuentos();
+        Integer horasLaboradas=prof.getHoras_laboradas();
+        Integer horasNo=prof.getHoras_nolaboradas();
+        Integer horasTotales=prof.getHoras_totales();
+        Double precioHoras=prof.getPrecio_horas();
+        if(horasTotales>(horasLaboradas+horasNo)){
+            mensaje="Te falta trabajar más";
+        } else if(horasTotales<(horasLaboradas+horasNo)){
+            mensaje="Te pasaste de horas reportadas";
+        }else{
+             salario= (horasLaboradas*precioHoras)+(horasNo*(precioHoras/2))-descuentos;
+             mensaje="Este es tu pago de este mes: "+ salario;
+        }
+        return mensaje;
+    }
 }
