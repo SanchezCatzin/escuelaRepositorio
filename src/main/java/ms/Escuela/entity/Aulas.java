@@ -1,9 +1,18 @@
 package ms.Escuela.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.ToString;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "Aulas")
+@Data
+@AllArgsConstructor
+@ToString
+@Builder
 public class Aulas {
 
     @Id
@@ -21,68 +30,10 @@ public class Aulas {
     @Column(name = "Tipo")
     private String Tipo;
 
-    @Column(name = "id_Campus")
-    private int id_Campus;
+    @ManyToOne
+    @JoinColumn(name = "id_Campus")
+    private Campus id_Campus;
 
-    public Aulas(){
-
-    }
-    public Aulas(int id, String nombre, int capacidad, String tipo, int id_Campus) {
-        this.id = id;
-        Nombre = nombre;
-        Capacidad = capacidad;
-        Tipo = tipo;
-        this.id_Campus = id_Campus;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return Nombre;
-    }
-
-    public void setNombre(String nombre) {
-        Nombre = nombre;
-    }
-
-    public int getCapacidad() {
-        return Capacidad;
-    }
-
-    public void setCapacidad(int capacidad) {
-        Capacidad = capacidad;
-    }
-
-    public String getTipo() {
-        return Tipo;
-    }
-
-    public void setTipo(String tipo) {
-        Tipo = tipo;
-    }
-
-    public int getId_Campus() {
-        return id_Campus;
-    }
-
-    public void setId_Campus(int id_Campus) {
-        this.id_Campus = id_Campus;
-    }
-
-    @Override
-    public String toString() {
-        return "Aulas{" +
-                "id=" + id +
-                ", Nombre='" + Nombre + '\'' +
-                ", Capacidad=" + Capacidad +
-                ", Tipo='" + Tipo + '\'' +
-                ", id_Campus=" + id_Campus +
-                '}';
+    public Aulas() {
     }
 }

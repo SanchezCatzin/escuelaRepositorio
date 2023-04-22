@@ -45,4 +45,9 @@ public class ProfesorController {
     public String calcular(@RequestBody Profesor profesor){
         return profesorService.calcularSalario(profesor);
     }
+
+    @PostMapping("/insertarProf")
+    public Profesor insertarProfesor(){
+        return profesorService.insertarProfe();
+    }
 }
